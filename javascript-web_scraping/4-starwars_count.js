@@ -8,7 +8,7 @@ let count = 0;
 
 request.get(url, (error, response, body) => {
   if (error) {
-    console.log(error);
+    process.stdout.write(error);
     return;
   }
 
@@ -22,5 +22,5 @@ request.get(url, (error, response, body) => {
     }
   });
 
-  console.log(count);
+  process.stdout.write(count);
 });

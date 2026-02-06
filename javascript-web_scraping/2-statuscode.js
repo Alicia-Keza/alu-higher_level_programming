@@ -6,8 +6,8 @@ const url = process.argv[2];
 
 request.get(url, (error, response) => {
   if (error) {
-    console.log(error);
+    process.stdout.write(error);
   } else {
-    console.log(`code: ${response.statusCode}`);
+    process.stdout.write(`code: ${response.statusCode}`);
   }
 });
