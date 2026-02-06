@@ -6,7 +6,7 @@ const url = process.argv[2];
 
 request.get(url, (error, response, body) => {
   if (error) {
-    process.stdout.write(error);
+    console.log(error);
     return;
   }
 
@@ -24,5 +24,5 @@ request.get(url, (error, response, body) => {
     }
   });
 
-  process.stdout.write(completedCount);
+  console.log(completedCount);
 });
